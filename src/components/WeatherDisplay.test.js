@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import WeatherDisplay from './WeatherDisplay';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 it('renders without chrashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<WeatherDisplay />, div);
 });
 
-test('App renders correctly', () => {
+test('WeatherDisplay renders correctly', () => {
   const tree = renderer
-    .create(<App />)
+    .create(<WeatherDisplay city="Helsinki" temp="0" />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 })

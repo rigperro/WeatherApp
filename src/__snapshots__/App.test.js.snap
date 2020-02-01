@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+.c2 {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid white;
+  background: transparent;
+  padding: 12px 20px;
+  font-family: 'Oxygen',sans-serif;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.c3 {
+  background: transparent;
+  border: 3px solid white;
+  border-radius: 3px;
+  color: white;
+  margin: 0.5em 1em;
+  font-family: 'Oxygen',sans-serif;
+  padding: 0.4em 0.8em;
+}
+
+.c3:hover {
+  background: #260A13;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c5 {
+  background: transparent;
+  border-radius: 3px;
+  border: 3px solid white;
+  color: white;
+  margin: 0.5em 1em;
+  font-family: 'Oxygen',sans-serif;
+  padding: 0.4em 0.8em;
+}
+
+.c5:hover {
+  background: #260A13;
+}
+
+.c0 {
+  text-align: center;
+}
+
+.c1 {
+  background-color: #38111e;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: 'Oxygen',sans-serif;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+<div
+  className="c0 App"
+>
+  <header
+    className="c1 App-header"
+  >
+    <h1>
+      My weather app
+    </h1>
+    <div>
+      <p>
+         To use this app, type the name of a city in the field below and press Enter or Go! 
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        className="c2"
+        name="city"
+        onChange={[Function]}
+        placeholder="Enter city to search"
+        type="text"
+        value=""
+      />
+      <button
+        className="c3"
+        type="submit"
+      >
+        Go
+      </button>
+    </form>
+    <div
+      className="c4"
+    >
+      <button
+        className="c5"
+        onClick={[Function]}
+      >
+        Set as favorite
+      </button>
+      <p>
+         Your favorites: 
+      </p>
+    </div>
+  </header>
+</div>
+`;

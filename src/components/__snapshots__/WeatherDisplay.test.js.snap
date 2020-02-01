@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherDisplay renders correctly 1`] = `
+<div>
+  <p>
+    Current weather for: 
+    <b>
+      Helsinki
+    </b>
+  </p>
+  <p>
+    Temperature: 
+    <b>
+      0
+       °C
+    </b>
+  </p>
+</div>
+`;

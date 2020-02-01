@@ -1,26 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Searchbar from './components/Searchbar'
+import WeatherDisplay from './components/WeatherDisplay'
+import Favorites from './components/Favorites'
+import * as Api from './api'
+import styled from 'styled-components';
 
-function App() {
+const App = () => {
+  const [city, setCity] = useState('');
+  const [temp, setTemp] = useState('');
+  const [errorMessage, setError] = useState('');
+
+const getWeather = input => {
+  Api.call(input).then((res)=> {
+    setCity(res.name);
+    setTemp(res.main.temp);
+    setError('');
+  }).catch((err) => {
+    console.log(err);
+    setCity('')
+    setTemp('');
+    setError("Error: " + err.message);
+  });
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledDiv className="App">
+      <StyledHeader className="App-header">
+        <h1>My weather app</h1>
+        <WeatherDisplay
+          city={city}
+          temp={temp}
+          error={errorMessage}
+        />
+        <Searchbar getWeather={getWeather}/>
+        <Favorites
+          getWeather={getWeather}
+          setError={setError}
+          city={city}
+        />
+      </StyledHeader>
+    </StyledDiv>
   );
 }
+
+const StyledDiv = styled.div`
+  text-align: center;
+`
+const StyledHeader = styled.header`
+  background-color: #38111e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oxygen', sans-serif;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`
 
 export default App;

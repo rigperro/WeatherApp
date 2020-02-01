@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Searchbar renders correctly 1`] = `
+.c0 {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid white;
+  background: transparent;
+  padding: 12px 20px;
+  font-family: 'Oxygen',sans-serif;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.c1 {
+  background: transparent;
+  border: 3px solid white;
+  border-radius: 3px;
+  color: white;
+  margin: 0.5em 1em;
+  font-family: 'Oxygen',sans-serif;
+  padding: 0.4em 0.8em;
+}
+
+.c1:hover {
+  background: #260A13;
+}
+
+<form
+  onSubmit={[Function]}
+>
+  <input
+    className="c0"
+    name="city"
+    onChange={[Function]}
+    placeholder="Enter city to search"
+    type="text"
+    value=""
+  />
+  <button
+    className="c1"
+    type="submit"
+  >
+    Go
+  </button>
+</form>
+`;
