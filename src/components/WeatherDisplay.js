@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Component to display the current city and temperature or alternatively
+// the instruction message and an error if there is one
 const WeatherDisplay = ({city, temp, error}) => {
   return(
     <div>

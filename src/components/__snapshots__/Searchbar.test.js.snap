@@ -7,7 +7,6 @@ exports[`Searchbar renders correctly 1`] = `
   border-bottom: 2px solid white;
   background: transparent;
   padding: 12px 20px;
-  font-family: 'Oxygen',sans-serif;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -18,7 +17,6 @@ exports[`Searchbar renders correctly 1`] = `
   border-radius: 3px;
   color: white;
   margin: 0.5em 1em;
-  font-family: 'Oxygen',sans-serif;
   padding: 0.4em 0.8em;
 }
 

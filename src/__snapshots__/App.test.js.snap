@@ -7,7 +7,6 @@ exports[`App renders correctly 1`] = `
   border-bottom: 2px solid white;
   background: transparent;
   padding: 12px 20px;
-  font-family: 'Oxygen',sans-serif;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -18,7 +17,6 @@ exports[`App renders correctly 1`] = `
   border-radius: 3px;
   color: white;
   margin: 0.5em 1em;
-  font-family: 'Oxygen',sans-serif;
   padding: 0.4em 0.8em;
 }
 
@@ -42,7 +40,6 @@ exports[`App renders correctly 1`] = `
   border: 3px solid white;
   color: white;
   margin: 0.5em 1em;
-  font-family: 'Oxygen',sans-serif;
   padding: 0.4em 0.8em;
 }
 
@@ -72,16 +69,15 @@ exports[`App renders correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: 'Oxygen',sans-serif;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 <div
-  className="c0 App"
+  className="c0"
 >
   <header
-    className="c1 App-header"
+    className="c1"
   >
     <h1>
       My weather app

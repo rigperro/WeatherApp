@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+// This component is simply a text input field with a search button
+// that calls the parent components getWeather
 const Searchbar = ({getWeather}) => {
   const [input, setInput] = useState('');
 
@@ -32,7 +34,6 @@ const StyledInput = styled.input`
   border-bottom: 2px solid white;
   background: transparent;
   padding: 12px 20px;
-  font-family: 'Oxygen', sans-serif;
   font-size: calc(10px + 2vmin);
   color: white;
 `
@@ -43,7 +44,6 @@ const StyledButton = styled.button`
   border-radius: 3px;
   color: white;
   margin: 0.5em 1em;
-  font-family: 'Oxygen', sans-serif;
   padding: 0.4em 0.8em;
   &:hover {
   background: #260A13;

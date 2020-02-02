@@ -5,27 +5,30 @@ import Favorites from './components/Favorites'
 import * as Api from './api'
 import styled from 'styled-components';
 
+// Main App
 const App = () => {
+  // Keep track of searched city, it's temperature and an error message in states
   const [city, setCity] = useState('');
   const [temp, setTemp] = useState('');
   const [errorMessage, setError] = useState('');
 
-const getWeather = input => {
-  Api.call(input).then((res)=> {
-    setCity(res.name);
-    setTemp(res.main.temp);
-    setError('');
-  }).catch((err) => {
-    console.log(err);
-    setCity('')
-    setTemp('');
-    setError("Error: " + err.message);
-  });
-}
+  // This method is used to call the API and get the temperature or error
+  const getWeather = input => {
+    Api.call(input).then((res)=> {
+      setCity(res.name);
+      setTemp(res.main.temp);
+      setError('');
+    }).catch((err) => {
+      console.log(err);
+      setCity('')
+      setTemp('');
+      setError("Error: " + err.message);
+    });
+  }
 
   return (
-    <StyledDiv className="App">
-      <StyledHeader className="App-header">
+    <StyledDiv>
+      <StyledHeader>
         <h1>My weather app</h1>
         <WeatherDisplay
           city={city}
@@ -53,7 +56,6 @@ const StyledHeader = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Oxygen', sans-serif;
   font-size: calc(10px + 2vmin);
   color: white;
 `
